@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+APPS_EXTERNA = [
+    "rest_framework"
+   
+]
 
 # Application definition
 
@@ -40,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Perfiles'
 ]
+INSTALLED_APPS += APPS_EXTERNA
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

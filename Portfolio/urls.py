@@ -19,6 +19,7 @@ from django.urls import path, include
 #Traer, importar cada def
 from Portfolio.views import * #si no va el nombre de cada vista
 from . import views
+from Perfiles.router import router
 
 urlpatterns = [
     path('admin/', admin.site.urls), #Nombre de la funcion del archivo views
@@ -33,6 +34,8 @@ urlpatterns = [
     path('skills/', skills, name = 'skills'),
     path('contacto/', contacto, name = 'contacto')
 ]
+
+urlpatterns += router.urls
 
 
 
